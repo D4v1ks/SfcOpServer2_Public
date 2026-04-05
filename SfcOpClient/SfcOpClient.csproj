@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net10.0</TargetFramework>
+		<StartupObject>SfcOpClient.Program</StartupObject>
+		<Version>1.0.2.0</Version>
+		<Company>D4v1ks</Company>
+		<Authors>Carlos Manuel Ferreira dos Santos</Authors>
+		<Copyright>Carlos Santos (C) 2020-2026</Copyright>
+		<Description>Sfc2Op Client</Description>
+		<AnalysisLevel>latest</AnalysisLevel>
+		<ProduceReferenceAssembly>False</ProduceReferenceAssembly>
+		<Nullable>disable</Nullable>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<DebugType>full</DebugType>
+		<DebugSymbols>true</DebugSymbols>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DefineConstants>VERBOSE</DefineConstants>
+		<Optimize>false</Optimize>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<DefineConstants></DefineConstants>
+		<Optimize>true</Optimize>
+	</PropertyGroup>
+
+	<Import Project="..\shrGF\shrGF.projitems" Label="Shared" />
+	<Import Project="..\shrNet\shrNet.projitems" Label="Shared" />
+	<Import Project="..\shrQ3\shrQ3.projitems" Label="Shared" />
+	<Import Project="..\shrServices\shrServices.projitems" Label="Shared" />
+
+	<ItemGroup>
+		<PackageReference Include="MP3Sharp" Version="1.0.5" />
+		<PackageReference Include="Silk.NET.OpenAL" Version="2.23.0" />
+		<PackageReference Include="Silk.NET.OpenAL.Soft.Native" Version="1.23.1" />
+		<PackageReference Include="System.Drawing.Common" Version="10.0.5" />
+		<PackageReference Include="System.Windows.Extensions" Version="10.0.5" />
+	</ItemGroup>
+
+</Project>

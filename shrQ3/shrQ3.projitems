@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>e1f1176b-056f-4625-b6e4-c28a517f175b</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>shrQ3</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Libraries\clsBmp.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Libraries\clsRes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Libraries\clsUI.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)clsQ3.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)clsQ3\tObject\tAsset.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)clsQ3\tObject\tAsset\tBmpAsset.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)clsQ3\tObject\tAsset\tBoundAsset.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)clsQ3\tObject\tAsset\tBoundAsset\tGenericRectAsset.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)clsQ3\tObject\tAsset\tBoundAsset\tStaticTextAsset.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)clsQ3\tObject\tAsset\tButtonAsset\tPushBtnAsset.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)clsQ3\tObject\tAsset\tButtonAsset\tValueBtnAsset.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)clsQ3\tObject\tAsset\tControlAsset.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)clsQ3\tObject\tAsset\tUnknown.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)clsQ3\tObject\tAsset\tVisualGroupAsset.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)clsQ3\tObject\tCodeAsset.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)clsQ3\tObject\tAsset\tControlAsset\tButtonAsset.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)clsQ3\tObject\tAsset\tControlAsset\tScrollBoxAsset.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)clsQ3\tObject\tAsset\tControlAsset\tSliderAsset.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)clsQ3\tObject\tAsset\tControlAsset\tTextEditAsset.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)clsQ3\tObject\tDirectory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)clsQ3\tObject\tFile.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)clsQ3\tObject\tGroupCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)clsQ3\tObject\tImages.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)clsQ3\tObject\tPoint.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)clsQ3\tObject\tRectCntl.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)clsQ3\tObject\tSprite.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)clsQ3\tObject\tSpriteCntl.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)clsQ3\tObject\tString.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)clsQ3\tObject\tTextInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)clsQ3\tObject\tUserHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)clsQ3\tObject\tAsset\tVisualGroupAsset\tRadioGroupAsset.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)clsQ3\tObject.cs" />
+  </ItemGroup>
+</Project>

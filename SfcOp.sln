@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.2.11415.280
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SfcOpServer", "SfcOpServer\SfcOpServer.csproj", "{42ABDA1F-50BD-4F85-A235-B8975B6ABA2D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SfcOpClient", "SfcOpClient\SfcOpClient.csproj", "{DFBB1F67-31F2-41B2-A5BC-F76962F47390}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "shrPcg", "shrPcg\shrPcg.shproj", "{3272D358-0E93-42F3-9D89-7E8DA188500C}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "shrGF", "shrGF\shrGF.shproj", "{4BC4C71D-1ADB-4DC0-8B79-1A065B9BD84A}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "shrQ3", "shrQ3\shrQ3.shproj", "{E1F1176B-056F-4625-B6E4-C28A517F175B}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "shrServices", "shrServices\shrServices.shproj", "{628978C7-6D09-4DDC-BE9B-DCB8C8C6EA0A}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "shrNet", "shrNet\shrNet.shproj", "{AC7AD18C-7838-4CA3-826A-1AC07B300CC1}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "shrWire", "shrWire\shrWire.shproj", "{0A20DD71-154C-4C0C-AA90-5E317C839B3A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{E57A06A9-25A6-4886-9CC5-3222B61D4E51}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE.md = LICENSE.md
+		Resources\Met_Common.scr = Resources\Met_Common.scr
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{42ABDA1F-50BD-4F85-A235-B8975B6ABA2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42ABDA1F-50BD-4F85-A235-B8975B6ABA2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42ABDA1F-50BD-4F85-A235-B8975B6ABA2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42ABDA1F-50BD-4F85-A235-B8975B6ABA2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFBB1F67-31F2-41B2-A5BC-F76962F47390}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFBB1F67-31F2-41B2-A5BC-F76962F47390}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFBB1F67-31F2-41B2-A5BC-F76962F47390}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFBB1F67-31F2-41B2-A5BC-F76962F47390}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {337BF6D1-42A1-4FEB-90CC-03617E13771A}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		shrWire\shrWire.projitems*{0a20dd71-154c-4c0c-aa90-5e317c839b3a}*SharedItemsImports = 13
+		shrPcg\shrPcg.projitems*{3272d358-0e93-42f3-9d89-7e8da188500c}*SharedItemsImports = 13
+		shrGF\shrGF.projitems*{42abda1f-50bd-4f85-a235-b8975b6aba2d}*SharedItemsImports = 5
+		shrNet\shrNet.projitems*{42abda1f-50bd-4f85-a235-b8975b6aba2d}*SharedItemsImports = 5
+		shrPcg\shrPcg.projitems*{42abda1f-50bd-4f85-a235-b8975b6aba2d}*SharedItemsImports = 5
+		shrServices\shrServices.projitems*{42abda1f-50bd-4f85-a235-b8975b6aba2d}*SharedItemsImports = 5
+		shrWire\shrWire.projitems*{42abda1f-50bd-4f85-a235-b8975b6aba2d}*SharedItemsImports = 5
+		shrGF\shrGF.projitems*{4bc4c71d-1adb-4dc0-8b79-1a065b9bd84a}*SharedItemsImports = 13
+		shrServices\shrServices.projitems*{628978c7-6d09-4ddc-be9b-dcb8c8c6ea0a}*SharedItemsImports = 13
+		shrNet\shrNet.projitems*{ac7ad18c-7838-4ca3-826a-1ac07b300cc1}*SharedItemsImports = 13
+		shrGF\shrGF.projitems*{dfbb1f67-31f2-41b2-a5bc-f76962f47390}*SharedItemsImports = 5
+		shrNet\shrNet.projitems*{dfbb1f67-31f2-41b2-a5bc-f76962f47390}*SharedItemsImports = 5
+		shrQ3\shrQ3.projitems*{dfbb1f67-31f2-41b2-a5bc-f76962f47390}*SharedItemsImports = 5
+		shrServices\shrServices.projitems*{dfbb1f67-31f2-41b2-a5bc-f76962f47390}*SharedItemsImports = 5
+		shrQ3\shrQ3.projitems*{e1f1176b-056f-4625-b6e4-c28a517f175b}*SharedItemsImports = 13
+	EndGlobalSection
+EndGlobal

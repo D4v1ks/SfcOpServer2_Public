@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>628978c7-6d09-4ddc-be9b-dcb8c8c6ea0a</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>shrServices</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Common\QueryTimer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\Utils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Gamespy\Profiles\GamespyUser.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Gamespy\Profiles\GamespyGame.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Irc\IrcService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Irc\Profiles\IIrcClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Irc\Profiles\IrcChannel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Irc\Profiles\IrcClientSocket.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Irc\Profiles\IrcClientStream.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Irc\Profiles\IIrcProfile.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Irc\Profiles\IrcProfile.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Time\TimeService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WonDirectory\DuplexService15101.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WonDirectory\DuplexService15300.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Gamespy\Services\DuplexService28900.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Gamespy\Services\DuplexService29900.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Gamespy\Services\DuplexService29901.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Http\DuplexService80.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Gamespy\GamespyService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Gamespy\Services\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Gamespy\Profiles\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Http\" />
+    <Folder Include="$(MSBuildThisFileDirectory)WonDirectory\" />
+  </ItemGroup>
+</Project>
