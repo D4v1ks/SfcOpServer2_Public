@@ -149,8 +149,9 @@ namespace SfcOpServer
                     ThrowError(data, "Year First\\Last Available");
 
                 if (
-                    (data.ClassType != ClassTypes.kClassPlanets && (data.SizeClass < 1 || data.SizeClass > 6)) ||
-                    (data.ClassType == ClassTypes.kClassPlanets && data.SizeClass != 0)
+                    ((data.ClassType < ClassTypes.kClassPlanets || data.ClassType > ClassTypes.kClassSpecial) && (data.SizeClass < 1 || data.SizeClass > 6)) ||
+                    (data.ClassType == ClassTypes.kClassPlanets && data.SizeClass != 0) ||
+                    (data.ClassType == ClassTypes.kClassSpecial && (data.SizeClass < 0 || data.SizeClass > 6))
                 )
                     ThrowError(data, "Size Class");
 
