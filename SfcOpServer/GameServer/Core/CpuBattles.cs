@@ -1,4 +1,6 @@
-﻿using shrGF;
+﻿//#define PROCESS_CPU_BATTLES
+
+using shrGF;
 using shrPcg;
 
 using System;
@@ -77,10 +79,12 @@ namespace SfcOpServer
             }
         }
 
+#if !PROCESS_CPU_BATTLES
+        public static void ProcessCpuBattles()
+        { }
+#else
         public void ProcessCpuBattles()
         {
-            return;
-
             for (int i = 0; i < _map.Length; i++)
             {
                 MapHex hex = _map[i];
@@ -198,5 +202,7 @@ namespace SfcOpServer
                     weapons[j] = new(weapon.Type, weapon.Count - 1);
             }
         }
+#endif
+
     }
 }
