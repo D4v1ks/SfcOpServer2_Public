@@ -21,6 +21,7 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "shrWire", "shrWire\shrWire.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{E57A06A9-25A6-4886-9CC5-3222B61D4E51}"
 	ProjectSection(SolutionItems) = preProject
+		CODEOWNERS = CODEOWNERS
 		LICENSE.md = LICENSE.md
 		Resources\Met_Common.scr = Resources\Met_Common.scr
 		README.md = README.md
