@@ -137,8 +137,8 @@ namespace SfcOpServer
                 if (data.HullType > HullTypes.kFighter && data.HullType != HullTypes.kHullPlanet)
                     ThrowError(data, "Hull Type");
 
-                if (data.ClassName.StartsWith("O-", StringComparison.OrdinalIgnoreCase) || data.ClassName.StartsWith("M-", StringComparison.OrdinalIgnoreCase))
-                    ThrowError(data, "Class");
+                if (data.ClassName.StartsWith("O-", StringComparison.OrdinalIgnoreCase))
+                    ThrowError(data, "Class names starting with 'O-' are not supported");
 
                 if ((int)data.SpecialRole >= 0)
                     data.SpecialRole = (SpecialRoles)(1 << (int)data.SpecialRole);

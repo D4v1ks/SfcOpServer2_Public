@@ -275,7 +275,7 @@ namespace SfcOpServer
                                                 break;
 
                                             case 3:
-                                                race = GetIndex(a[1], _raceAbbreviations, StringComparison.OrdinalIgnoreCase, true);
+                                                race = GetIndex(a[1], _realAbbreviations, StringComparison.OrdinalIgnoreCase, true);
 
                                                 if (race != -1 && _shiplist.TryGetValue(a[2], out data))
                                                 {
@@ -287,7 +287,7 @@ namespace SfcOpServer
                                                 break;
 
                                             case 4:
-                                                race = GetIndex(a[1], _raceAbbreviations, StringComparison.OrdinalIgnoreCase, true);
+                                                race = GetIndex(a[1], _realAbbreviations, StringComparison.OrdinalIgnoreCase, true);
 
                                                 if (race != -1 && _shiplist.TryGetValue(a[2], out data) && a[3].Equals("-m", StringComparison.Ordinal))
                                                 {

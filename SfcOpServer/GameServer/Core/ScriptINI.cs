@@ -66,7 +66,7 @@ namespace SfcOpServer
 
                 s.Append((int)team1.Id);
                 s.Append(" = ");
-                s.AppendHex((byte)team1.Tag);
+                s.AppendHex((byte)(((int)team1.Type << 4) | (int)team1.Tag));
 
                 foreach (var p in mission.Teams)
                 {

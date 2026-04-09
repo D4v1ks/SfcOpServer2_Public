@@ -115,13 +115,43 @@ namespace SfcOpServer
             "W",
             "C",
             "N",
+            "M",
+            null,
+            null,
+            null,
+            null,
+            null,
             "N",
+            null
+        ];
+
+        // these are meant to be unique and only used in the context of chat
+        private static readonly string[] _realAbbreviations =
+        [
+            "F",
+            "K",
+            "R",
+            "L",
+            "H",
+            "G",
+            "I",
+            "Z",
+            "X",
+            "Y",
+            "P",
+            "T",
+            "B",
+            "S",
+            "W",
+            "C",
+            "O",
+            "M",
             null,
             null,
             null,
             null,
             null,
-            "",
+            "N",
             null
         ];
 
