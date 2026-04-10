@@ -270,24 +270,6 @@ namespace SfcOpServer
 
             s.Clear();
 
-            /*
-                // rnd (must be != 0)
-
-                for (int i = 0; i < 1; i++)
-                {
-                    uint j;
-
-                    do
-                        j = _rand.NextUInt32() >> 1;
-                    while (j == 0u);
-
-                    string k = "%r" + i.ToString(CultureInfo.InvariantCulture);
-                    string v = j.ToString(CultureInfo.InvariantCulture);
-
-                    ini = ini.Replace(k, v, StringComparison.Ordinal);
-                }
-            */
-
             // checks if we need to override the mission background
 
             if (mapTemplate.Background != null)

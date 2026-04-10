@@ -23,34 +23,6 @@ namespace SfcOpServer
 
             UpdateHomeLocations();
 
-            /*
-                // fills the AI character's data required for them to appear in the name list
-                // (is everything required?)
-
-                foreach (KeyValuePair<int, Character> p in _characters)
-                {
-                    Character character = p.Value;
-
-                    if (character.CharacterRace >= Races.kFirstNPC)
-                        continue;
-
-                    Contract.Assert(character.IPAddress.Length == 0);
-
-                    character.IPAddress = IPAddress.Loopback.ToString();
-
-                    Contract.Assert(character.WONLogon.Length == 0);
-
-                    character.WONLogon = character.CharacterName + "@hs.net";
-
-                    Location location = _homeLocations[(int)character.CharacterRace][0];
-
-                    Contract.Assert(location != null);
-
-                    character.HomeWorldLocationX = location.X;
-                    character.HomeWorldLocationY = location.Y;
-                }
-            */
-
             CalculateInitialProduction();
             CalculateBudget();
 
@@ -248,19 +220,6 @@ namespace SfcOpServer
             catch (Exception e)
             {
                 LogError("ProcessCpuMovements()", e);
-            }
-#endif
-
-#if DEBUG
-            ProcessCpuBattles();
-#else
-            try
-            {
-                ProcessCpuBattles();
-            }
-            catch (Exception e)
-            {
-                LogError("ProcessCpuBattles()", e);
             }
 #endif
 

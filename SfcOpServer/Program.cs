@@ -107,7 +107,7 @@ namespace SfcOpServer
             string[] motd =
             [
                 appName + " (C) D4v1ks 2020-2026",
-                "H&S TEAM: D4v1ks (programmer), Adam (backer), TarMinyatur (playtester)",
+                "Server Credits: D4v1ks (programmer), Adam (backer), TarMinyatur (playtester)",
             ];
 
             string[] logo =

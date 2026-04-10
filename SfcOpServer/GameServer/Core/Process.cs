@@ -2228,41 +2228,6 @@ namespace SfcOpServer
 
                     c++;
                 }
-
-                /*
-                    // tries to add the current character
-
-                    character = client.Character;
-
-                    client.IdList.TryAdd(character.Id, null);
-
-                    Push(character, isHexCacheSet: true, isFlagSet: true);
-
-                    c++;
-
-                    // tries to add all the other characters
-
-                    //int allied = (int)_alliances[(int)client.Character.CharacterRace];
-
-                    foreach (KeyValuePair<int, Character> p in _characters)
-                    {
-                        character = p.Value;
-
-                        if ((character.State & Character.States.IsOnline) != 0) // && ((1 << (int)character.CharacterRace) & allied) != 0)
-                        {
-                            client.IdList.TryAdd(character.Id, null);
-
-                            Contract.Assert((character.CharacterRace >= Races.kFirstNPC) || (character.IPAddress.Length != 0 && character.WONLogon.Length != 0));
-
-                            Push(character, isHexCacheSet: true, isFlagSet: true);
-
-                            c++;
-
-                            if (c >= 900) // relative cap per race (due to how many we can send in a msg at once)
-                                break;
-                        }
-                    }
-                */
             }
             else
             {

@@ -562,19 +562,6 @@ namespace SfcOpServer
 
                                                 if (int.TryParse(a[1], NumberStyles.None, CultureInfo.InvariantCulture, out i) && i >= 0 && i <= 49)
                                                 {
-                                                    //if (ship.Systems.Items[i << 1] > 0)
-                                                    //{
-                                                    //    ship.Systems.Items[(i << 1) + 1] = (byte)(ship.Systems.Items[i << 1] - 1);
-
-                                                    //    msg.Append(":Systems PRIVMSG ");
-                                                    //    msg.Append(client.Nick);
-                                                    //    msg.Append(" :The system ");
-                                                    //    msg.Append(i);
-                                                    //    msg.Append(" was damaged by 1");
-                                                    //}
-
-                                                    // -----------------------------------------------------------------------------------
-
                                                     for (j = 0; j < 50; j++)
                                                         ship.Systems.Items[j] = 1;
 

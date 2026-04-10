@@ -955,8 +955,6 @@ namespace SfcOpServer
 
             ResetAvailableMissions();
 
-            LoadCpuBattleSettings();
-
             // finalize the variables
 
             InitializeLocationIncrements();
