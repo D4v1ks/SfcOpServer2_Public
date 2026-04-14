@@ -4,7 +4,6 @@ using shrServices;
 using shrWire;
 
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Diagnostics.Contracts;
@@ -22,21 +21,6 @@ namespace SfcOpServer
         private static void Main(string[] args)
         {
             Contract.Requires(args != null);
-
-#if DEBUG
-            // checks the environment variables
-
-            var values = Environment.GetEnvironmentVariables();
-
-            foreach (DictionaryEntry v in (Hashtable)values)
-                Debug.WriteLine(v.Key + " = " + v.Value);
-
-            // https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-environment-variables
-
-            string value = Environment.GetEnvironmentVariable("DOTNET_SYSTEM_NET_SOCKETS_INLINE_COMPLETIONS");
-
-            Contract.Assert(value == null || value.Equals("0"));
-#endif
 
             // gets the current list of IPs
 
@@ -236,7 +220,8 @@ namespace SfcOpServer
 
                 Process.Start(startInfo);
 
-                // VERY IMPORTANT: it is assumed here that the stock server has at least run once, previously, using the SFC Launcher                
+                // it is assumed here that the stock server has at least run once,
+                // using the SFC Launcher, to set the ServerPlatform.exe ip addresses
 
                 WireServer mitm = new(privateIP);
 
