@@ -1,4 +1,5 @@
-﻿#pragma warning disable IDE0028
+﻿#pragma warning disable IDE0079
+#pragma warning disable IDE0028
 
 #if DEBUG
 //#define DEBUG_SETTINGS

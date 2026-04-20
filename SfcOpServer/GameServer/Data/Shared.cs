@@ -134,7 +134,9 @@ namespace SfcOpServer
             null
         ];
 
-        // these are meant to be unique and only used in the context of chat
+        /// <summary>
+        /// These abbreviations are meant to be unique and only used in the context of a chat command
+        /// </summary>
         private static readonly string[] _realAbbreviations =
         [
             "F",

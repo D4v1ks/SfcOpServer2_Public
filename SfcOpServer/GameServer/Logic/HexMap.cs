@@ -1,6 +1,4 @@
-﻿//#define DISPLAY_MAP
-
-using System;
+﻿using System;
 using System.Buffers;
 using System.Collections.Generic;
 using System.Diagnostics.Contracts;
@@ -11,12 +9,6 @@ namespace SfcOpServer
     public partial class GameServer
     {
         private const int maxHomeLocations = 8;
-
-#if DISPLAY_MAP
-        private Size _mapSize;
-        private Bitmap _mapBitmap;
-        private Graphics _mapGraphics;
-#endif
 
         // private functions
 
@@ -201,12 +193,6 @@ namespace SfcOpServer
             {
                 UpdateHexHomeStatus();
                 //BroadcastHex(-1);  TODO
-
-#if DISPLAY_MAP
-                if ((_seconds & 31) == 0)
-                    DisplayMap(0);
-#endif
-
             }
         }
 
@@ -309,79 +295,7 @@ namespace SfcOpServer
             ExpandHexHomeStatus(coord, r, c);
         }
 
-#if DISPLAY_MAP
-        private void DisplayMap(int layer)
-        {
-            int i = 0;
-
-            Console.Clear();
-
-            for (int y = 0; y < _mapHeight; y++)
-            {
-                for (int x = 0; x < _mapWidth; x++)
-                {
-                    MapHex hex = _map[i];
-
-                    i++;
-
-                    ConsoleColor color;
-
-                    switch (layer)
-                    {
-                        case 0:
-                            if (hex.EmpireControl == Races.kNeutralRace)
-                                color = ConsoleColor.Black;
-                            else
-                                color = _raceColors[(int)hex.EmpireControl];
-
-                            break;
-
-                        case 1:
-                            if (hex.CartelControl == Races.kNeutralRace)
-                                color = ConsoleColor.Black;
-                            else
-                                color = _raceColors[(int)hex.CartelControl - 8];
-
-                            break;
-
-                        default:
-                            throw new NotImplementedException();
-                    }
-
-                    Console.ForegroundColor = color;
-
-                    if ((y & 1) == 0)
-                        Console.Write(' ');
-
-                    if (hex.Planet > 0)
-                        Console.Write('O');
-                    else if (hex.Base > 0)
-                        Console.Write('o');
-                    else
-                        Console.Write('#');
-
-                    if ((y & 1) == 1)
-                        Console.Write(' ');
-                }
-
-                Console.WriteLine();
-            }
-
-            Console.ResetColor();
-
-            if (_mapGraphics == null)
-            {
-                _mapSize = new(580, 516);
-                _mapBitmap = new(_mapSize.Width, _mapSize.Height, PixelFormat.Format24bppRgb);
-                _mapGraphics = Graphics.FromImage(_mapBitmap);
-            }
-
-            _mapGraphics.CopyFromScreen(8, 32, 0, 0, _mapSize);
-            _mapBitmap.Save("C:/Users/Carlos Santos/Pictures/001/" + _seconds + ".jpg", ImageFormat.Jpeg);
-        }
-#endif
-
-        // home locations
+        // ... home locations
 
         private void UpdateHomeLocations()
         {
@@ -465,7 +379,7 @@ namespace SfcOpServer
             }
         }
 
-        // population census
+        // ... population census
 
         private static void ClearPopulationCensus(PopulationCensus census)
         {
